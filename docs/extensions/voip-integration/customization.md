@@ -117,6 +117,27 @@ To add some custom entities to Quick Create Entities, create/modify the file `/c
 Make sure that your JSON data is correct after changes.
 To take effect, clear a system cache (Administration > Clear Cache) and reload a page in your browser.
 
+## Fetching information from the Call to Quick Create Entity 
+
+If Quick Create Entity is a Task entity, and need to fetch **phoneNumber** from the Call in the **description** field:
+1. In `custom/Espo/Custom/Resources/metadata/entityDefs/Task.json` add the field:
+```
+{
+    "fields": {
+        "voipEventData": {
+            "type": "jsonObject",
+            "clientReadOnly": true,
+            "notStorable": true
+        }
+    }
+}
+```
+2. Make Rebuild and grant the necessary Permissions: https://docs.espocrm.com/administration/server-configuration/#permissions.
+3. In Administration > Entity Manager > Task > Formula > Before Save Custom Script add the following formula:
+```
+$voipEventData = json\encode(voipEventData);
+description = json\retrieve($voipEventData, 'phoneNumber');
+```
 
 ## Adding a call name to a call popup
 
