@@ -83,3 +83,7 @@ public class ExampleClass {
     }
 }
 ```
+
+!!! note
+
+*Authentication Method* for API User must be `HMAC`.
