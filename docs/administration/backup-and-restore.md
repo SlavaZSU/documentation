@@ -130,6 +130,10 @@ More details about configuring crontab see [here](server-configuration.md#settin
 
 ### Backup with a script
 
+!!! important
+
+    Script must be run from the host.
+
 #### Step 1. Download a script
 
 ```bash
