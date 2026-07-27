@@ -81,9 +81,6 @@ The Email's *Status* field has the following values:
 
 When a new email comes, the system tries to recognize which record this email belongs to. It can link it with Account, Lead, Opportunity, Case (and also Contact in B2C mode), etc. If it wasn't recognized, then the user can link it manually by filling in the *Parent* field.
 
-If an email came from a new potential client, the user can convert it to a Lead (from the top-right menu).
-
-It's possible to create a Task or Case from an email record (from the top-right menu).
 
 If email addresses (From, To, CC) of the email record are known to the system, it will show the person they are related to (Contact, Lead, User, etc.). If some email address is new, you can create a Contact right from there.
 
@@ -92,6 +89,20 @@ All emails related to a specific record are shown in the History panel of that r
 When **removing** an email it gets removed from the system entirely, so that it will disappear from their *Inbox*. To prevent this, use *Move to Trash*. An administrator may not grant *delete* access for users to prevent losing emails.
 
 On the list view it's possible to **drag & drop** emails into folders by dragging by a subject link (as of v7.3).
+
+#### Converting to Lead
+
+If an email came from a new potential client, the user can convert it to a Lead (from the top-right menu).
+
+#### Tasks
+
+It is possible to create one or multiple Tasks from an email (from the top-right menu). Created tasks are displayed in the right panel in the Email detail view. Completed tasks are marked with a green check mark.
+
+Tasks can be useful for collaboration purpose. For example, if team members see that an email already has a task named 'Reply to Email', they will know that someone else is responsible for responding and will not reply themselves. The user assigned to the task will be instructed to reply to the email through the task.
+
+#### Case creation
+
+A Case can be created from an email record (from the top-right menu). After case creation, the email will be related to the case through the Parent field.
 
 ### Inbox
 
